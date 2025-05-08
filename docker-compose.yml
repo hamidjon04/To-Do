@@ -1,0 +1,41 @@
+services:
+  # PostgreSQL uchun konteyner
+  postgres_to_do:
+    image: postgres:13
+    container_name: postgres_to_do
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - "5433:5433"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - to_do_network
+
+  # Go API uchun konteyner
+  todo_api:
+    build: .
+    container_name: todo_api
+    ports:
+      - "8087:8087" # Bu portni .env faylidagi TO_DO o'zgaruvchisi asosida ishlatadi
+    depends_on:
+      - postgres_to_do
+    environment:
+      DB_HOST: postgres_to_do
+      DB_PORT: 5433
+      DB_USER: ${DB_USER}
+      DB_NAME: ${DB_NAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+      TO_DO: ${TO_DO}
+    networks:
+      - to_do_network
+
+networks:
+  to_do_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+    driver: local
