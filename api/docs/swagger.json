@@ -16,6 +16,9 @@
                 "produces": [
                     "application/json"
                 ],
+                "tags": [
+                    "Auth"
+                ],
                 "summary": "Login user",
                 "parameters": [
                     {
@@ -58,6 +61,9 @@
                 ],
                 "produces": [
                     "application/json"
+                ],
+                "tags": [
+                    "Auth"
                 ],
                 "parameters": [
                     {
@@ -106,6 +112,9 @@
                 "produces": [
                     "application/json"
                 ],
+                "tags": [
+                    "ToDo"
+                ],
                 "parameters": [
                     {
                         "type": "integer",
@@ -152,6 +161,9 @@
                 "produces": [
                     "application/json"
                 ],
+                "tags": [
+                    "ToDo"
+                ],
                 "parameters": [
                     {
                         "description": "Update ToDo",
@@ -197,6 +209,9 @@
                 "produces": [
                     "application/json"
                 ],
+                "tags": [
+                    "ToDo"
+                ],
                 "parameters": [
                     {
                         "description": "Create ToDo",
@@ -241,6 +256,9 @@
                 ],
                 "produces": [
                     "application/json"
+                ],
+                "tags": [
+                    "ToDo"
                 ],
                 "parameters": [
                     {

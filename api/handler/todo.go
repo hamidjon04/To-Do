@@ -9,6 +9,7 @@ import (
 )
 
 // @Description Create a new ToDo with title, description, and user ID
+// @Tags ToDo
 // @Accept json
 // @Produce json
 // @Security BearerAuth
@@ -35,6 +36,7 @@ func (h *Handler) CreateTodo(c *gin.Context) {
 }
 
 // @Description Get all ToDos for a specific user by user ID
+// @Tags ToDo
 // @Accept json
 // @Produce json
 // @Security BearerAuth
@@ -60,6 +62,7 @@ func (h *Handler) GetTodos(c *gin.Context) {
 }
 
 // @Description Update the title, description, and completion status of a ToDo
+// @Tags ToDo
 // @Accept json
 // @Produce json
 // @Security BearerAuth
@@ -86,6 +89,7 @@ func (h *Handler) UpdateTodo(c *gin.Context) {
 }
 
 // @Description Delete a ToDo by ID and User ID
+// @Tags ToDo
 // @Accept json
 // @Produce json
 // @Security BearerAuth

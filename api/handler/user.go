@@ -10,6 +10,7 @@ import (
 )
 
 // @Description Create a new user with name, email, and password
+// @Tags Auth
 // @Accept json
 // @Produce json
 // @Param user body models.CreateUserReq true "Create User"
@@ -39,6 +40,7 @@ func (h *Handler) Register(c *gin.Context) {
 
 // @Summary Login user
 // @Description User logs in with their email and password
+// @Tags Auth
 // @Accept json
 // @Produce json
 // @Param login body models.LoginReq true "Login credentials"

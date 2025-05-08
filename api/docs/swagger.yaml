@@ -122,6 +122,8 @@ paths:
           schema:
             $ref: '#/definitions/models.ErrorResponse'
       summary: Login user
+      tags:
+      - Auth
   /register:
     post:
       consumes:
@@ -149,6 +151,8 @@ paths:
           description: Internal Server Error
           schema:
             $ref: '#/definitions/models.ErrorResponse'
+      tags:
+      - Auth
   /todos:
     delete:
       consumes:
@@ -178,6 +182,8 @@ paths:
             $ref: '#/definitions/models.ErrorResponse'
       security:
       - BearerAuth: []
+      tags:
+      - ToDo
     get:
       consumes:
       - application/json
@@ -207,6 +213,8 @@ paths:
             $ref: '#/definitions/models.ErrorResponse'
       security:
       - BearerAuth: []
+      tags:
+      - ToDo
     post:
       consumes:
       - application/json
@@ -235,6 +243,8 @@ paths:
             $ref: '#/definitions/models.ErrorResponse'
       security:
       - BearerAuth: []
+      tags:
+      - ToDo
     put:
       consumes:
       - application/json
@@ -263,6 +273,8 @@ paths:
             $ref: '#/definitions/models.ErrorResponse'
       security:
       - BearerAuth: []
+      tags:
+      - ToDo
 securityDefinitions:
   BearerAuth:
     description: Type "Bearer" followed by a space and your JWT token.

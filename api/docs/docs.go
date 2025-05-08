@@ -24,6 +24,9 @@ const docTemplate = `{
                 "produces": [
                     "application/json"
                 ],
+                "tags": [
+                    "Auth"
+                ],
                 "summary": "Login user",
                 "parameters": [
                     {
@@ -66,6 +69,9 @@ const docTemplate = `{
                 ],
                 "produces": [
                     "application/json"
+                ],
+                "tags": [
+                    "Auth"
                 ],
                 "parameters": [
                     {
@@ -114,6 +120,9 @@ const docTemplate = `{
                 "produces": [
                     "application/json"
                 ],
+                "tags": [
+                    "ToDo"
+                ],
                 "parameters": [
                     {
                         "type": "integer",
@@ -160,6 +169,9 @@ const docTemplate = `{
                 "produces": [
                     "application/json"
                 ],
+                "tags": [
+                    "ToDo"
+                ],
                 "parameters": [
                     {
                         "description": "Update ToDo",
@@ -205,6 +217,9 @@ const docTemplate = `{
                 "produces": [
                     "application/json"
                 ],
+                "tags": [
+                    "ToDo"
+                ],
                 "parameters": [
                     {
                         "description": "Create ToDo",
@@ -249,6 +264,9 @@ const docTemplate = `{
                 ],
                 "produces": [
                     "application/json"
+                ],
+                "tags": [
+                    "ToDo"
                 ],
                 "parameters": [
                     {
