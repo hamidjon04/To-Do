@@ -32,6 +32,17 @@ services:
     networks:
       - to_do_network
 
+  migrate:
+    image: migrate/migrate
+    networks:
+      - todo_api
+    volumes:
+      - ./db/migrations:/migrations
+    depends_on:
+      postgres_to_do:
+        condition: service_healthy
+    command: ["-path", "/migrations", "-database", "postgres://${DB_USER}:${DB_PASSWORD}@postgres-db:${DB_PORT}/${DB_NAME}?sslmode=disable", "up"]
+
 networks:
   to_do_network:
     driver: bridge
