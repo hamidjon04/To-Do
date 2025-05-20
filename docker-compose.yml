@@ -35,7 +35,7 @@ services:
   migrate:
     image: migrate/migrate
     networks:
-      - todo_api
+      - to_do_network
     volumes:
       - ./db/migrations:/migrations
     depends_on:
