@@ -31,6 +31,7 @@ WORKDIR /root/
 
 # 9. Qurilgan ilovani ko'chiramiz
 COPY --from=builder /app/main .
+COPY --from=builder /app/.env .
 
 # 10. Portni ochamiz
 EXPOSE 8087
