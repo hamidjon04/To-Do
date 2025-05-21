@@ -9,24 +9,24 @@ type CreateToDoReq struct {
 }
 
 type Todo struct {
-	ID          int
-	UserID      int
-	Title       string
-	Description string
-	IsCompleted bool
-	CreatedAt   time.Time
-	UpdatedAt   time.Time
+	ID          int       `json:"id"`
+	UserId      int       `json:"user_id"`
+	Title       string    `json:"title"`
+	Description string    `json:"description"`
+	IsCompleted bool      `json:"is_completed"`
+	CreatedAt   time.Time `json:"created_at"`
+	UpdatedAt   time.Time `json:"updated_at"`
 }
 
 type UpdateToDoReq struct {
-	ID          int
-	UserId      int
-	Title       string
-	Description string
-	IsCompleted bool
+	ID          int    `josn:"id"`
+	UserId      int    `json:"user_id"`
+	Title       string `json:"title"`
+	Description string `json:"description"`
+	IsCompleted bool   `json:"is_completed"`
 }
 
 type DeleteToDoReq struct {
-	ID     int
-	UserID int 
+	ID     int `josn:"id"`
+	UserId int `json:"user_id"`
 }

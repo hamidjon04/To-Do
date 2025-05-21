@@ -21,7 +21,7 @@ definitions:
     properties:
       id:
         type: integer
-      userID:
+      user_id:
         type: integer
     type: object
   models.ErrorResponse:
@@ -46,19 +46,19 @@ definitions:
     type: object
   models.Todo:
     properties:
-      createdAt:
+      created_at:
         type: string
       description:
         type: string
       id:
         type: integer
-      isCompleted:
+      is_completed:
         type: boolean
       title:
         type: string
-      updatedAt:
+      updated_at:
         type: string
-      userID:
+      user_id:
         type: integer
     type: object
   models.UpdateToDoReq:
@@ -67,11 +67,11 @@ definitions:
         type: string
       id:
         type: integer
-      isCompleted:
+      is_completed:
         type: boolean
       title:
         type: string
-      userId:
+      user_id:
         type: integer
     type: object
   models.User:

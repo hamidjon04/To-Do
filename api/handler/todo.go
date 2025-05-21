@@ -105,7 +105,7 @@ func (h *Handler) DeleteTodo(c *gin.Context) {
 		return
 	}
 
-	err := h.Storage.DeleteTodo(req.ID, req.UserID)
+	err := h.Storage.DeleteTodo(req.ID, req.UserId)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Could not delete todo"})
 		return

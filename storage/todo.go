@@ -9,7 +9,7 @@ func (s *DB) CreateTodo(req models.CreateToDoReq) (*models.Todo, error) {
 		VALUES ($1, $2, $3)
 		RETURNING id, user_id, title, description, is_completed, created_at, updated_at
 	`, req.UserId, req.Title, req.Description).Scan(
-		&t.ID, &t.UserID, &t.Title, &t.Description, &t.IsCompleted, &t.CreatedAt, &t.UpdatedAt,
+		&t.ID, &t.UserId, &t.Title, &t.Description, &t.IsCompleted, &t.CreatedAt, &t.UpdatedAt,
 	)
 	if err != nil {
 		return nil, err
@@ -32,7 +32,7 @@ func (s *DB) GetTodos(userID int) ([]models.Todo, error) {
 	var todos []models.Todo
 	for rows.Next() {
 		var t models.Todo
-		err := rows.Scan(&t.ID, &t.UserID, &t.Title, &t.Description, &t.IsCompleted, &t.CreatedAt, &t.UpdatedAt)
+		err := rows.Scan(&t.ID, &t.UserId, &t.Title, &t.Description, &t.IsCompleted, &t.CreatedAt, &t.UpdatedAt)
 		if err != nil {
 			return nil, err
 		}

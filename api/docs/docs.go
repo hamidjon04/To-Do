@@ -337,7 +337,7 @@ const docTemplate = `{
                 "id": {
                     "type": "integer"
                 },
-                "userID": {
+                "user_id": {
                     "type": "integer"
                 }
             }
@@ -376,7 +376,7 @@ const docTemplate = `{
         "models.Todo": {
             "type": "object",
             "properties": {
-                "createdAt": {
+                "created_at": {
                     "type": "string"
                 },
                 "description": {
@@ -385,16 +385,16 @@ const docTemplate = `{
                 "id": {
                     "type": "integer"
                 },
-                "isCompleted": {
+                "is_completed": {
                     "type": "boolean"
                 },
                 "title": {
                     "type": "string"
                 },
-                "updatedAt": {
+                "updated_at": {
                     "type": "string"
                 },
-                "userID": {
+                "user_id": {
                     "type": "integer"
                 }
             }
@@ -408,13 +408,13 @@ const docTemplate = `{
                 "id": {
                     "type": "integer"
                 },
-                "isCompleted": {
+                "is_completed": {
                     "type": "boolean"
                 },
                 "title": {
                     "type": "string"
                 },
-                "userId": {
+                "user_id": {
                     "type": "integer"
                 }
             }
@@ -461,6 +461,8 @@ var SwaggerInfo = &swag.Spec{
 	Description:      "API for managing ToDo tasks with user authentication.",
 	InfoInstanceName: "swagger",
 	SwaggerTemplate:  docTemplate,
+	LeftDelim:        "{{",
+	RightDelim:       "}}",
 }
 
 func init() {

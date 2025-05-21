@@ -329,7 +329,7 @@
                 "id": {
                     "type": "integer"
                 },
-                "userID": {
+                "user_id": {
                     "type": "integer"
                 }
             }
@@ -368,7 +368,7 @@
         "models.Todo": {
             "type": "object",
             "properties": {
-                "createdAt": {
+                "created_at": {
                     "type": "string"
                 },
                 "description": {
@@ -377,16 +377,16 @@
                 "id": {
                     "type": "integer"
                 },
-                "isCompleted": {
+                "is_completed": {
                     "type": "boolean"
                 },
                 "title": {
                     "type": "string"
                 },
-                "updatedAt": {
+                "updated_at": {
                     "type": "string"
                 },
-                "userID": {
+                "user_id": {
                     "type": "integer"
                 }
             }
@@ -400,13 +400,13 @@
                 "id": {
                     "type": "integer"
                 },
-                "isCompleted": {
+                "is_completed": {
                     "type": "boolean"
                 },
                 "title": {
                     "type": "string"
                 },
-                "userId": {
+                "user_id": {
                     "type": "integer"
                 }
             }
