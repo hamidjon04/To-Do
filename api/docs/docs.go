@@ -461,8 +461,6 @@ var SwaggerInfo = &swag.Spec{
 	Description:      "API for managing ToDo tasks with user authentication.",
 	InfoInstanceName: "swagger",
 	SwaggerTemplate:  docTemplate,
-	LeftDelim:        "{{",
-	RightDelim:       "}}",
 }
 
 func init() {
